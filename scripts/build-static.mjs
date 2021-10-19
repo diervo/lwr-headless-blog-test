@@ -2,11 +2,11 @@ import { generateStaticSite } from 'lwr';
 
 const serverMode = 'dev';
 
-const result = await generateStaticSite({
+await generateStaticSite({
     serverMode,
     staticSiteGenerator: {
         outputDir: `__generated_site_${serverMode}__`
     }
 });
 
-console.log(result);
+process.exit(0);
